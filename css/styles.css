@@ -1,0 +1,784 @@
+/* Base Styles */
+:root {
+    /* Variables de colores principales - Definen la paleta de colores del sitio */
+    --primary-color: #4caf50;
+    --primary-dark: #388e3c;
+    --primary-light: #c8e6c9;
+    --secondary-color: #2196f3;
+    --text-color: #333333;
+    --text-light: #757575;
+    --background-color: #ffffff;
+    --background-light: #f5f5f5;
+    --border-color: #e0e0e0;
+    --success-color: #4caf50;
+    --warning-color: #ffc107;
+    --error-color: #f44336;
+  
+    /* Variables de diseño - Definen aspectos visuales consistentes */
+    --border-radius: 8px;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Reseteo básico de estilos para eliminar márgenes y rellenos predeterminados */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Configuración básica de HTML y body */
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth; /* Permite desplazamiento suave al hacer clic en enlaces internos */
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-light);
+  }
+  
+  /* Estilos para encabezados */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Estilos para enlaces */
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+  }
+  
+  a:hover {
+    color: var(--primary-dark);
+  }
+  
+  /* Elimina los puntos de las listas */
+  ul {
+    list-style: none;
+  }
+  
+  /* Asegura que las imágenes no excedan su contenedor */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Contenedor principal para limitar el ancho del contenido */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Estructura básica de la página */
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que la página ocupe al menos toda la altura de la ventana */
+  }
+  
+  main {
+    flex: 1; /* Hace que el contenido principal ocupe todo el espacio disponible */
+  }
+  
+  /* Estilos para botones */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary-dark);
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+  }
+  
+  /* Estilos para el encabezado */
+  .header {
+    background-color: var(--background-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Mantiene el encabezado visible al desplazarse */
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .logo a {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+  }
+  
+  .logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  /* Estilos para la navegación principal */
+  .main-nav .nav-list {
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem;
+    position: relative;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--primary-color);
+  }
+  
+  /* Línea debajo del enlace activo */
+  .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+  }
+  
+  /* Botón de menú para móviles (hamburguesa) */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: var(--transition);
+  }
+  
+  /* Estilos para la sección hero (banner principal) */
+  .hero {
+    background-color: var(--primary-light);
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* Estilos para la sección de características */
+  .features {
+    padding: 4rem 0;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    color: var(--primary-dark);
+  }
+  
+  .section-subtitle {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0.5rem auto 0;
+  }
+  
+  /* Cuadrícula para las tarjetas de características */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    text-align: center;
+  }
+  
+  /* Efecto de elevación al pasar el ratón */
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .feature-icon svg {
+    color: var(--primary-color);
+  }
+  
+  .feature-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-description {
+    color: var(--text-light);
+  }
+  
+  /* Estilos para la sección de llamada a la acción (CTA) */
+  .cta {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-description {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+  }
+  
+  /* Estilos para el encabezado de página */
+  .page-header {
+    background-color: var(--primary-light);
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-description {
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos para el sistema de pestañas */
+  .tabs {
+    margin: 3rem 0;
+  }
+  
+  .tabs-header {
+    display: flex;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 2rem;
+    overflow-x: auto; /* Permite desplazamiento horizontal en dispositivos pequeños */
+    -webkit-overflow-scrolling: touch; /* Mejora el desplazamiento en iOS */
+  }
+  
+  .tab-btn {
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    font-weight: 500;
+    color: var(--text-light);
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+  }
+  
+  .tab-btn.active {
+    color: var(--primary-color);
+  }
+  
+  /* Línea debajo del botón de pestaña activo */
+  .tab-btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  /* Estilos para la sección de rutinas */
+  .rutinas-section {
+    padding: 2rem 0 4rem;
+  }
+  
+  .rutina-card {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+  
+  .rutina-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+  }
+  
+  .rutina-title {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .rutina-body {
+    padding: 1.5rem;
+  }
+  
+  .rutina-section {
+    margin-bottom: 2rem;
+  }
+  
+  .rutina-section:last-child {
+    margin-bottom: 0;
+  }
+  
+  .rutina-section-title {
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .ejercicio {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .ejercicio:last-child {
+    border-bottom: none;
+  }
+  
+  .ejercicio-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ejercicio-nombre {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  
+  .ejercicio-detalles {
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+  
+  .ejercicio-tips {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+  
+  /* Estilos para la sección de alimentación */
+  .alimentacion-section {
+    padding: 2rem 0 4rem;
+  }
+  
+  .comidas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .comida-card {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+  }
+  
+  .comida-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .comida-title {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+  
+  .comida-hora {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+  
+  .comida-body {
+    padding: 1.5rem;
+  }
+  
+  .comida-opciones li {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .comida-opciones li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .comida-opciones h3 {
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .comida-opciones p {
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+  }
+  
+  /* Estilos para las recomendaciones */
+  .recomendaciones-card {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+  
+  .recomendaciones-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+  }
+  
+  .recomendaciones-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .recomendaciones-body {
+    padding: 1.5rem;
+  }
+  
+  .recomendaciones-lista li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  /* Añade un punto verde antes de cada elemento de la lista */
+  .recomendaciones-lista li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+  }
+  
+  .alimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .alimentos-categoria h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--primary-light);
+  }
+  
+  .alimentos-categoria ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .alimentos-categoria ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+  }
+  
+  /* Estilos para las recetas */
+  .recetas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .receta-card {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+  }
+  
+  .receta-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+  }
+  
+  .receta-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .receta-body {
+    padding: 1.5rem;
+  }
+  
+  .receta-ingredientes {
+    margin-bottom: 2rem;
+  }
+  
+  .receta-ingredientes h3,
+  .receta-preparacion h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .receta-ingredientes ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .receta-ingredientes ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+  }
+  
+  .receta-preparacion ol {
+    padding-left: 1.5rem;
+  }
+  
+  .receta-preparacion ol li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Estilos para el pie de página */
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 3rem 0 1rem;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-logo h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-logo p {
+    opacity: 0.8;
+  }
+  
+  .footer-nav h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-nav ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-nav ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: var(--transition);
+  }
+  
+  .footer-nav ul li a:hover {
+    color: white;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-bottom p {
+    opacity: 0.7;
+    font-size: 0.9rem;
+  }
+  
+  /* Estilos responsivos para diferentes tamaños de pantalla */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .section-title,
+    .cta-title,
+    .page-title {
+      font-size: 1.8rem;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    /* Mostrar el botón de menú en dispositivos móviles */
+    .menu-toggle {
+      display: block;
+    }
+  
+    /* Estilos para el menú móvil */
+    .nav-list {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: var(--background-color);
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(-150%); /* Oculta el menú fuera de la pantalla */
+      transition: transform 0.3s ease;
+      z-index: 99;
+    }
+  
+    .nav-list.active {
+      transform: translateY(0); /* Muestra el menú cuando está activo */
+    }
+  
+    .nav-item {
+      margin: 0.5rem 0;
+    }
+  
+    .tabs-header {
+      flex-wrap: wrap;
+    }
+  
+    .tab-btn {
+      flex: 1 0 auto;
+      text-align: center;
+    }
+  }
+  
+  /* Ajustes adicionales para pantallas muy pequeñas */
+  @media (max-width: 576px) {
+    .hero {
+      padding: 3rem 0;
+    }
+  
+    .features,
+    .rutinas-section,
+    .alimentacion-section {
+      padding: 2rem 0;
+    }
+  
+    .feature-card,
+    .rutina-card,
+    .comida-card,
+    .recomendaciones-card,
+    .receta-card {
+      padding: 1rem;
+    }
+  
+    .comidas-container,
+    .recetas-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

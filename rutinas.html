@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos: definen el conjunto de caracteres, la vista móvil y el título de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Entrenamiento | Rutinas Específicas</title>
+    <!-- Descripción de la página para SEO (optimización para motores de búsqueda) -->
+    <meta name="description" content="Rutinas de entrenamiento específicas">
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/rutinas.css">
+    <!-- Enlaces a Google Fonts para cargar las fuentes personalizadas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <!-- Contenedor principal de la página -->
+    <div class="page-wrapper">
+        <!-- Cabecera de la página con logo y menú de navegación -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <!-- Logo del sitio -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>FitPlan</h1>
+                        </a>
+                    </div>
+                    <!-- Menú de navegación principal -->
+                    <nav class="main-nav">
+                        <!-- Botón de menú para dispositivos móviles -->
+                        <button class="menu-toggle" aria-label="Abrir menú">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <!-- Lista de enlaces de navegación -->
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                            <li class="nav-item"><a href="rutinas.html" class="nav-link active">Rutinas</a></li>
+                            <li class="nav-item"><a href="alimentacion.html" class="nav-link">Alimentación</a></li>
+                            <li class="nav-item"><a href="alimentacion-semanal.html" class="nav-link">Plan Semanal</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido principal de la página -->
+        <main>
+            <!-- Encabezado de la página de rutinas -->
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title">Rutinas Específicas</h1>
+                    <p class="page-description">Rutinas de entrenamiento detalladas para tus objetivos</p>
+                </div>
+            </section>
+
+            <!-- Sección de rutinas por días -->
+            <section class="rutinas-section">
+                <div class="container">
+                    <!-- Navegación por días -->
+                    <div class="rutinas-dias">
+                        <div class="dias-nav">
+            <button class="dia-btn active" data-dia="dia1">Día 1: Piernas</button>
+            <button class="dia-btn" data-dia="dia2">Día 2: Hombros/Brazos</button>
+            <button class="dia-btn" data-dia="dia2-alt">Día 3: Pecho/Espalda</button>
+        </div>
+
+                        <!-- Contenido de cada día -->
+                        <!-- CONTENIDO DÍA 1: PIERNAS Y PANTORRILLAS -->
+        <div class="dia-content active" id="dia1">
+            <div class="rutina-dia-card">
+                <div class="rutina-dia-header">
+                    <h2 class="rutina-dia-title">Día 1: Piernas y Pantorrillas</h2>
+                    <button class="print-rutina-btn" onclick="window.print()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                            <rect x="6" y="14" width="12" height="8"></rect>
+                        </svg>
+                        Imprimir
+                    </button>
+                </div>
+                <div class="rutina-dia-body">
+                    <div class="ejercicio-grupo">
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">1</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Extensiones</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 15 series</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Siéntate en la máquina con la espalda recta y concéntrate en la contracción del cuádriceps. Extiende completamente las piernas y mantén la contracción por un segundo antes de bajar controladamente.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">2</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Press (Prensa)</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 15 series</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Coloca los pies a la altura de los hombros y baja hasta que las rodillas formen un ángulo de 90°. Empuja a través de los talones para volver a la posición inicial, sin bloquear completamente las rodillas.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">3</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Máquina Hack</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 15 series</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Mantén la espalda apoyada en el respaldo y baja controladamente. Asegúrate de que las rodillas no sobrepasen la punta de los pies durante el movimiento.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">4</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Desplantes</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 12 series</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Mantén el torso erguido y da un paso lo suficientemente largo. Baja hasta que la rodilla trasera casi toque el suelo, manteniendo la rodilla delantera alineada con el tobillo.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">5</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Empinadas Pantorrilla</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">20 x 4 series</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Estira completamente la pantorrilla en cada repetición. Sube lo más alto posible sobre los dedos de los pies y luego baja controladamente hasta sentir un estiramiento en las pantorrillas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Notas adicionales -->
+                    <div class="rutina-notas">
+                        <h3 class="rutina-notas-title">Notas para este día:</h3>
+                        <ul class="rutina-notas-list">
+                            <li>Realiza un calentamiento específico para piernas antes de comenzar.</li>
+                            <li>Mantén una técnica correcta en todos los ejercicios para prevenir lesiones.</li>
+                            <li>Ajusta los pesos según tu nivel, pero siempre manteniendo la capacidad de completar las repeticiones indicadas.</li>
+                            <li>Descansa entre 60-90 segundos entre series.</li>
+                            <li>Estira bien las piernas al finalizar la sesión para mejorar la recuperación.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CONTENIDO DÍA 2: HOMBROS Y BRAZOS -->
+        <div class="dia-content" id="dia2">
+            <div class="rutina-dia-card">
+                <div class="rutina-dia-header">
+                    <h2 class="rutina-dia-title">Día 2: Hombros y Brazos</h2>
+                    <button class="print-rutina-btn" onclick="window.print()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                            <rect x="6" y="14" width="12" height="8"></rect>
+                        </svg>
+                        Imprimir
+                    </button>
+                </div>
+                <div class="rutina-dia-body">
+                    <!-- Grupo de ejercicios: Hombros -->
+                    <div class="ejercicio-grupo">
+                        <h3 class="grupo-title">Hombros</h3>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">1</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Press Militar c/ Barra</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 12</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Mantén el core activado y evita arquear la espalda. Empuja la barra directamente hacia arriba, alineada con la parte delantera de tu cara, hasta la extensión completa de los brazos.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">2</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Laterales combinadas c/ Frontales</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 12</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Mantén una ligera flexión en los codos durante todo el movimiento. Alterna entre elevaciones laterales y frontales, manteniendo el control durante todo el recorrido.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">3</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Jalones c/ polea Posterior</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 15</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Inclínate ligeramente hacia adelante para aislar el deltoides posterior. Tira de la polea hacia atrás y hacia afuera, manteniendo los codos altos durante el movimiento.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">4</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Encogimientos c/ mancuernas</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 10 (combinado)</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Eleva los hombros directamente hacia las orejas, sin rotar. Mantén la contracción en la parte superior por un segundo y luego baja controladamente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Grupo de ejercicios: Bíceps -->
+                    <div class="ejercicio-grupo">
+                        <h3 class="grupo-title">Bíceps</h3>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">5</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Curl c/ Barra</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 15</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Mantén los codos pegados al cuerpo durante todo el movimiento. Levanta la barra con un movimiento controlado y concéntrate en la contracción del bíceps en la parte superior.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">6</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Curl Martillo</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 15</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Mantén las muñecas neutras y los codos estables. Este ejercicio trabaja tanto el bíceps como el braquial y el braquiorradial, dando forma completa al brazo.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">7</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Predicador</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 15</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Apoya bien los brazos en el banco y concéntrate en la contracción. Este ejercicio aísla el bíceps y reduce la posibilidad de hacer trampa con el impulso.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Grupo de ejercicios: Tríceps -->
+                    <div class="ejercicio-grupo">
+                        <h3 class="grupo-title">Tríceps</h3>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">8</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Tríceps Extensiones c/ Polea</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 15</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Mantén los codos cerca de la cabeza y extiende completamente los brazos. Concéntrate en contraer el tríceps en la posición extendida.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">9</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Press Francés c/ Mancuerna</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 15</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Baja la mancuerna controladamente hacia la frente o detrás de la cabeza. Mantén los codos apuntando hacia arriba durante todo el movimiento.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Notas adicionales -->
+                    <div class="rutina-notas">
+                        <h3 class="rutina-notas-title">Notas para este día:</h3>
+                        <ul class="rutina-notas-list">
+                            <li>Realiza un calentamiento específico para hombros antes de comenzar.</li>
+                            <li>Mantén una técnica correcta en todos los ejercicios para prevenir lesiones.</li>
+                            <li>Concéntrate en la contracción muscular y en la conexión mente-músculo durante cada repetición.</li>
+                            <li>Respira correctamente: exhala durante el esfuerzo e inhala durante la fase de recuperación.</li>
+                            <li>Estira bien los músculos trabajados al finalizar la sesión.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CONTENIDO DÍA 2 ALTERNATIVO: PECHO Y ESPALDA -->
+        <div class="dia-content" id="dia2-alt">
+            <div class="rutina-dia-card">
+                <div class="rutina-dia-header">
+                    <h2 class="rutina-dia-title">Día 3: Pecho y Espalda</h2>
+                    <button class="print-rutina-btn" onclick="window.print()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                            <rect x="6" y="14" width="12" height="8"></rect>
+                        </svg>
+                        Imprimir
+                    </button>
+                </div>
+                <div class="rutina-dia-body">
+                    <!-- Grupo de ejercicios: Pecho -->
+                    <div class="ejercicio-grupo">
+                        <h3 class="grupo-title">Pecho</h3>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">1</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Máquina Aperturas</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 15 series</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Ajusta el asiento para que los brazos estén alineados con el pecho. Mantén una ligera flexión en los codos durante todo el movimiento y concéntrate en la contracción del pecho al juntar los brazos.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">2</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Press c/ Mancuerna c/ Press Unido</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">12 x 4 y 10 x 4</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Alterna entre press normal y press con mancuernas juntas. En el press normal, baja las mancuernas a los lados del pecho; en el press unido, mantén las mancuernas juntas durante todo el movimiento.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">3</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Press Inclinado</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 12</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Ajusta el banco a 30-45 grados para enfocarte en la parte superior del pecho. Mantén los hombros hacia atrás y el pecho elevado durante todo el movimiento.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Grupo de ejercicios: Espalda -->
+                    <div class="ejercicio-grupo">
+                        <h3 class="grupo-title">Espalda</h3>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">4</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Remo Sentado</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 15</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Mantén la espalda recta y lleva el mango hacia el abdomen. Aprieta los omóplatos al final del movimiento y mantén la contracción por un segundo antes de volver a la posición inicial.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">5</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Jalones Frontales</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">4 x 15</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Lleva la barra hacia el pecho, no hacia la nuca. Mantén una ligera inclinación hacia atrás y tira con los codos, no con las manos, para activar mejor los músculos de la espalda.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">6</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Combinado Remo Serrucho</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">10 x 4</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Apoya una rodilla y mano en el banco, manteniendo la espalda paralela al suelo. Tira de la mancuerna hacia arriba, llevando el codo hacia atrás y manteniendo el brazo cerca del cuerpo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Grupo de ejercicios: Cardio -->
+                    <div class="ejercicio-grupo">
+                        <h3 class="grupo-title">Cardio</h3>
+                        
+                        <div class="ejercicio-item">
+                            <div class="ejercicio-numero">7</div>
+                            <div class="ejercicio-info">
+                                <h4 class="ejercicio-nombre">Cardio Elíptica</h4>
+                                <div class="ejercicio-detalles">
+                                    <span class="ejercicio-detalle">20 minutos</span>
+                                </div>
+                                <p class="ejercicio-descripcion">
+                                    Mantén una intensidad moderada, con intervalos de mayor intensidad cada 5 minutos. Alterna entre 4 minutos a ritmo moderado y 1 minuto a alta intensidad para maximizar la quema de calorías.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Notas adicionales -->
+                    <div class="rutina-notas">
+                        <h3 class="rutina-notas-title">Notas para este día:</h3>
+                        <ul class="rutina-notas-list">
+                            <li>Realiza un calentamiento específico para pecho y espalda antes de comenzar.</li>
+                            <li>Mantén una técnica correcta en todos los ejercicios, especialmente en los movimientos compuestos.</li>
+                            <li>Concéntrate en la contracción muscular y en la conexión mente-músculo durante cada repetición.</li>
+                            <li>Respira correctamente: exhala durante el esfuerzo e inhala durante la fase de recuperación.</li>
+                            <li>Termina la sesión con estiramientos para los músculos trabajados.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de llamada a la acción (CTA) -->
+            <section class="cta">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2 class="cta-title">¿Necesitas un plan más personalizado?</h2>
+                        <p class="cta-description">Podemos adaptar tus rutinas a tus objetivos específicos</p>
+                        <a href="#" class="btn btn-primary">Contactar</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <div class="container">
+                <!-- Contenido principal del footer -->
+                <div class="footer-content">
+                    <!-- Logo y descripción en el footer -->
+                    <div class="footer-logo">
+                        <h2>FitPlan</h2>
+                        <p>Tu plan personalizado de entrenamiento y alimentación</p>
+                    </div>
+                    <!-- Navegación rápida en el footer -->
+                    <div class="footer-nav">
+                        <h3>Enlaces rápidos</h3>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="rutinas.html">Rutinas</a></li>
+                          
+                            <li><a href="alimentacion.html">Alimentación</a></li>
+                            <li><a href="alimentacion-semanal.html">Plan Semanal</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Parte inferior del footer con copyright -->
+                <div class="footer-bottom">
+                    <p>&copy; 2025 FitPlan. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="js/main.js"></script>
+    <script src="js/rutinas.js"></script>
+    
+   
+</body>
+</html>

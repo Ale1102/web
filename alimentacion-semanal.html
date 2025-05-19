@@ -1,18 +1,18 @@
-
-<?php
-// Configuración básica de la página
-$page_title = "Plan Semanal de Alimentación";
-$current_page = "alimentacion-semanal";
-// Ruta raíz del proyecto   
-
-$root_path = "../"; // Ajusta según la estructura de tu proyecto
-
-
-// Incluir el encabezado
-include '../includes/header.php';
-?>
-
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos: definen el conjunto de caracteres, la vista móvil y el título de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Entrenamiento | Plan Semanal de Alimentación</title>
+    <!-- Descripción de la página para SEO (optimización para motores de búsqueda) -->
+    <meta name="description" content="Plan semanal de alimentación personalizado">
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Enlaces a Google Fonts para cargar las fuentes personalizadas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Estilos específicos para la tabla de alimentación */
         .plan-table {
@@ -168,7 +168,35 @@ include '../includes/header.php';
 <body>
     <!-- Contenedor principal de la página -->
     <div class="page-wrapper">
-       
+        <!-- Cabecera de la página con logo y menú de navegación -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <!-- Logo del sitio -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>FitPlan</h1>
+                        </a>
+                    </div>
+                    <!-- Menú de navegación principal -->
+                    <nav class="main-nav">
+                        <!-- Botón de menú para dispositivos móviles -->
+                        <button class="menu-toggle" aria-label="Abrir menú">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <!-- Lista de enlaces de navegación -->
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                            <li class="nav-item"><a href="rutinas.html" class="nav-link">Rutinas</a></li>
+                            <li class="nav-item"><a href="alimentacion.html" class="nav-link ">Alimentación</a></li>
+                            <li class="nav-item"><a href="alimentacion-semanal.html" class="nav-link active">Comida Semanal</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
 
         <!-- Contenido principal de la página -->
         <main>
@@ -546,7 +574,27 @@ include '../includes/header.php';
             </section>
         </main>
 
-      
+        <!-- Pie de página -->
+        <footer class="footer">
+            <div class="container">
+                <!-- Contenido principal del footer -->
+                <div class="footer-content">
+                    <!-- Logo y descripción en el footer -->
+                    <div class="footer-logo">
+                        <h2>FitPlan</h2>
+                        <p>Tu plan personalizado de entrenamiento y alimentación</p>
+                    </div>
+                    <!-- Navegación rápida en el footer -->
+                    <div class="footer-nav">
+                        <h3>Enlaces rápidos</h3>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="rutinas.html">Rutinas</a></li>
+                            <li><a href="alimentacion.html">Alimentación</a></li>
+                            <li><a href="alimentacion-semanal.html">Plan Semanal</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <!-- Parte inferior del footer con copyright -->
                 <div class="footer-bottom">
                     <p>&copy; 2025 FitPlan. Todos los derechos reservados.</p>
@@ -556,8 +604,6 @@ include '../includes/header.php';
     </div>
 
     <!-- Enlace al archivo JavaScript externo -->
-    <script src="assets/js/main.js"></script>
-<?php
-// Incluir el pie de página
-include '../includes/footer.php';
-?>
+    <script src="js/main.js"></script>
+</body>
+</html>
